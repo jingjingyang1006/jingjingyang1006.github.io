@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-git常用命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/21/git常用命令/" class="article-date">
+  <time datetime="2016-08-21T02:14:29.516Z" itemprop="datePublished">2016-08-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="markdown的配置"><a href="#markdown的配置" class="headerlink" title="markdown的配置"></a>markdown的配置</h2><p>file - settings - plugin - browser - 搜索markdown</p>
+<h2 id="告诉git你是谁"><a href="#告诉git你是谁" class="headerlink" title="告诉git你是谁"></a>告诉git你是谁</h2><p>如果不配置不能提交代码,三个点代表代码块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;用户名&quot; //最好使用github的用户名</div></pre></td></tr></table></figure></p>
+<h2 id="查看配置"><a href="#查看配置" class="headerlink" title="查看配置"></a>查看配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name</div><div class="line">git config --list</div></pre></td></tr></table></figure>
+<h2 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h2><p>自定义快捷键 living template<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir test</div><div class="line">cd test</div></pre></td></tr></table></figure></p>
+<h2 id="初始化git仓库"><a href="#初始化git仓库" class="headerlink" title="初始化git仓库"></a>初始化git仓库</h2><p>ls -al显示全部内容 会产生一个.git的隐藏文件，用来管理我们的文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init</div></pre></td></tr></table></figure></p>
+<h2 id="暂存区"><a href="#暂存区" class="headerlink" title="暂存区"></a>暂存区</h2><p>为了保护工作区和历史区，过渡作用</p>
+<h2 id="查看git的状态"><a href="#查看git的状态" class="headerlink" title="查看git的状态"></a>查看git的状态</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git status</div></pre></td></tr></table></figure>
+<h2 id="新建文件"><a href="#新建文件" class="headerlink" title="新建文件"></a>新建文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">touch index.txt</div></pre></td></tr></table></figure>
+<h2 id="像文件内写入内容"><a href="#像文件内写入内容" class="headerlink" title="像文件内写入内容"></a>像文件内写入内容</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo hello &gt; index.txt</div></pre></td></tr></table></figure>
+<h2 id="查看文件内容"><a href="#查看文件内容" class="headerlink" title="查看文件内容"></a>查看文件内容</h2><p>cat index.txt</p>
+<blockquote>
+<p>红色表示未加入暂存区内</p>
+</blockquote>
+<h2 id="添加文件到缓存区中"><a href="#添加文件到缓存区中" class="headerlink" title="添加文件到缓存区中"></a>添加文件到缓存区中</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git add file</div><div class="line">git add . / -A</div></pre></td></tr></table></figure>
+<h2 id="提交到版本去"><a href="#提交到版本去" class="headerlink" title="提交到版本去"></a>提交到版本去</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit -m&quot;此次提交的注释内容&quot;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>提交到版本库中通过git log 进行查看<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git log --oneline</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h2><p>比较工作区和缓存区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git diff</div></pre></td></tr></table></figure></p>
+<p>比较缓存区和历史区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git dif --cached</div></pre></td></tr></table></figure></p>
+<p>比较工作区和历史区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git diff master</div></pre></td></tr></table></figure></p>
+<h2 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h2><p>从缓存区中撤销add内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gir reset HEAD 文件的名字 .</div></pre></td></tr></table></figure></p>
+<h2 id="撤回文件"><a href="#撤回文件" class="headerlink" title="撤回文件"></a>撤回文件</h2><p>如果工作区有更改 ，我想用暂存区域或者历史区的内容去覆盖掉我们的工作区域<br>先查找暂存区 ，查找不到 查找历史区<br>用暂存区 替换掉工作区里的内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout 文件名字</div></pre></td></tr></table></figure></p>
+<h2 id="合并提交"><a href="#合并提交" class="headerlink" title="合并提交"></a>合并提交</h2><p>如果我们使用git commit 会产生一个新的版本，但是我们此次的提交，还想算作上次的提交<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit --amend //可以选择是否用以前的提交注释</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>如果进入编辑模式按esc键 输入:wq</p>
+</blockquote>
+<h2 id="删除缓存区，但是要保证工作区里内容必须不存在"><a href="#删除缓存区，但是要保证工作区里内容必须不存在" class="headerlink" title="删除缓存区，但是要保证工作区里内容必须不存在"></a>删除缓存区，但是要保证工作区里内容必须不存在</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git rm</div></pre></td></tr></table></figure>
+<h2 id="只删除缓存区"><a href="#只删除缓存区" class="headerlink" title="只删除缓存区"></a>只删除缓存区</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git rm --cached filename</div></pre></td></tr></table></figure>
+<h2 id="同时删除暂存区和工作区"><a href="#同时删除暂存区和工作区" class="headerlink" title="同时删除暂存区和工作区"></a>同时删除暂存区和工作区</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git rm -force 文件的名字</div></pre></td></tr></table></figure>
+<h2 id="从版本库拉回代码-回滚-回到过去"><a href="#从版本库拉回代码-回滚-回到过去" class="headerlink" title="从版本库拉回代码 回滚 回到过去"></a>从版本库拉回代码 回滚 回到过去</h2><p>git log 查看版本号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git reset --hard 版本号</div></pre></td></tr></table></figure></p>
+<h2 id="在回到未来"><a href="#在回到未来" class="headerlink" title="在回到未来"></a>在回到未来</h2><p>通过git reflog 查看未来的版本，使用reset回到未来<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git reflog</div></pre></td></tr></table></figure></p>
+<h2 id="创建仓库后需要关联远程仓库"><a href="#创建仓库后需要关联远程仓库" class="headerlink" title="创建仓库后需要关联远程仓库"></a>创建仓库后需要关联远程仓库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git remote add origin &apos;仓库的地址&apos;</div></pre></td></tr></table></figure>
+<h2 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin master</div></pre></td></tr></table></figure>
+<blockquote>
+<p>-u的意思是upstream 如果下次再提交可以直接使用git push</p>
+</blockquote>
+<h2 id="从工作区-直接提交到历史区（必须走一下过渡区）"><a href="#从工作区-直接提交到历史区（必须走一下过渡区）" class="headerlink" title="从工作区 直接提交到历史区（必须走一下过渡区）"></a>从工作区 直接提交到历史区（必须走一下过渡区）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit -a -m&quot;add 7788&quot;</div></pre></td></tr></table></figure>
+<h2 id="有冲突我们需要先把最新的拉下来"><a href="#有冲突我们需要先把最新的拉下来" class="headerlink" title="有冲突我们需要先把最新的拉下来"></a>有冲突我们需要先把最新的拉下来</h2><p>先使用git fetch拉下来 我们可以先比较一下不同在合并<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git fetch</div><div class="line">git merge</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>解决冲突 去掉&gt;&gt;&gt;&gt;  ==== &lt;&lt;&lt;&lt; 保存剩余的再次提交即可<br>git pull  = get fetch + git merge</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/08/21/git常用命令/" data-id="cis5q3sk80002xo0vh1cdwqua" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Buffer" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/21/Buffer/" class="article-date">
+  <time datetime="2016-08-21T02:07:01.000Z" itemprop="datePublished">2016-08-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/21/Buffer/">node.js</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Buffer"><a href="#Buffer" class="headerlink" title="Buffer"></a>Buffer</h1><p>JS语言自身只有字符串数据类型，没有二进制数据类型，因此Node.JS提供了一个与String对等的全局构造函数Buffer来提供对二进制数据的操作</p>
+<h3 id="1-什么是Buffer"><a href="#1-什么是Buffer" class="headerlink" title="1.什么是Buffer"></a>1.什么是Buffer</h3><p> .缓冲区Buffer是暂时存放输入输出数据的一段内存。<br> .JS语言没有二进制数据类型，而在处理TCP和文件流的时候，必须要处理二进制数据。<br> .NodeJS提供了一个BUffer对象来提供对二进制数据的操作<br> .是一个表示固定内存分配的全局对象，也就是说要放到缓存区中的字节数需要提前确定<br> .Buffer好比由一个多位字节元素组成的数组，可以有效的在javascript中表示二进制数据</p>
+<h3 id="2-什么是字节"><a href="#2-什么是字节" class="headerlink" title="2.什么是字节"></a>2.什么是字节</h3><p>.字节(Byte)是计算机存储时的一种计量单位，一个字节等于8位二进制数<br>.一个位就代表一个0或1，每8个位(bit)组成一个字节(Byte)<br>.字节通过网络传输信息的单位<br>.一个字节最大值十进制数是255<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1 var sum=0;</div><div class="line">2 for(var i=0;i&lt;8;i++)&#123;</div><div class="line">3     sum+=Math.pow(2,i);</div><div class="line">4 &#125;</div></pre></td></tr></table></figure></p>
+<h3 id="3-定义buffer的三种方式"><a href="#3-定义buffer的三种方式" class="headerlink" title="3.定义buffer的三种方式"></a>3.定义buffer的三种方式</h3><p>.通过长度定义buffer<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 new Buffer(size);</div></pre></td></tr></table></figure></p>
+<p>.通过数组定义buffer<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 new Buffer(array);</div></pre></td></tr></table></figure></p>
+<p>正常情况下为0-255之间<br>.字符串创建<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 new Buffer(str,[encoding]);</div></pre></td></tr></table></figure></p>
+<h3 id="4-buffer常用方法"><a href="#4-buffer常用方法" class="headerlink" title="4.buffer常用方法"></a>4.buffer常用方法</h3><p>4.1 fill方法<br>.手动初始化擦干净桌子 讲buffer内容清零<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 buffer.fill(0)</div></pre></td></tr></table></figure></p>
+<p>4.2 write方法<br>  会默认把内容从头写到尾<br>.string offset length encoding<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1 buffer.write(&apos;北&apos;,0,3,&apos;utf8&apos;);</div><div class="line">2 buffer.write(&apos;京&apos;,3,3,&apos;utf8&apos;);//北京</div></pre></td></tr></table></figure></p>
+<p>4.3 toString方法<br>.将buffer转换成字符串类型 start end是截取的buffer的长度<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 buffer.toString(&apos;utf8&apos;,3,6)</div></pre></td></tr></table></figure></p>
+<p>4.4 slice方法<br>.截取buffer 长度是字节数；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 buffer.slice(0,4);</div></pre></td></tr></table></figure></p>
+<p>.截取乱码问题<br>.先new一个实例 把字符串存进去，不能识别的保留，当在输出的时候进行拼接<br>.string_decoder编译<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1 var StringDecoder=require(&apos;string_decoder&apos;).StringDecoder</div><div class="line">2 var sd=new String_Decoder</div><div class="line">3 var buffer=new Buffer(&apos;北京&apos;)；</div><div class="line">4 console.log(sd.write(buffer.slice(0,4)));</div><div class="line">5 console.log(sd.write(buffer.slice(4)));</div></pre></td></tr></table></figure></p>
+<p>4.5 copy方法<br>.复制Buffer把多个buffer拷贝到一个大buffer上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">1 sourceBuffer.copy(targetBuffer，targetstart,sourcestart,sourceend)</div><div class="line">targetBuffer 目标buffer  </div><div class="line">targetstart目标的开始   </div><div class="line">sourcestart拷贝内容的开始  </div><div class="line">sourceend拷贝内容的结束</div><div class="line">2 var buffer=new Buffer(6);</div><div class="line">  var buffer1=new Buffer(&apos;珠&apos;)；</div><div class="line">  var buffer2=new Buffer(&apos;峰&apos;)；</div><div class="line">  buffer1.copy(buffer,0);</div><div class="line">  buffer2.copy(buffer.toString());</div></pre></td></tr></table></figure></p>
+<p>4.6 concat 拼接方法讲两个buffer拼接成1个buffer<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var buffer1=new Buffer(&apos;珠&apos;)；</div><div class="line">  var buffer2=new Buffer(&apos;峰&apos;)；</div><div class="line">  var newBuffer=Buffer.concat([buffer1,buffer2],3);</div><div class="line">  console.log(newBuffer.toString());</div></pre></td></tr></table></figure></p>
+<p>4.7 isBuffer<br>.判断是否是buffer<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Buffer.isBuffer</div></pre></td></tr></table></figure></p>
+<p>4.8 length<br> .获取字节长度(显示是字符串所代表buffer的长度)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1 Buffer.byteLength(&quot;珠峰&quot;)；</div><div class="line">2 buffer.length;</div></pre></td></tr></table></figure></p>
+<p>5.进制转换<br>.parseInt()</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/08/21/Buffer/" data-id="cis5q3sjw0000xo0vpyxd65ck" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hexo如何搭建静态博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/21/hexo如何搭建静态博客/" class="article-date">
+  <time datetime="2016-08-21T02:07:01.000Z" itemprop="datePublished">2016-08-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/21/hexo如何搭建静态博客/">node.js</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Hexo-搭建静态博客"><a href="#Hexo-搭建静态博客" class="headerlink" title="Hexo 搭建静态博客"></a>Hexo 搭建静态博客</h1><p>hexo是一款基于Node.js的快速的，简单的博客框架，能够创建一个项目进行编辑后生成一套静态网页，比较适合个人博客搭建。因为Hexo生成的网页不依赖数据库和任何web工具，所有可以把它放在Github上，然后配置好域名以后进行访问。</p>
+<h3 id="安装前置条件"><a href="#安装前置条件" class="headerlink" title="安装前置条件"></a>安装前置条件</h3><p>安装Hexo相当简单。然而在安装前，您必须检查电脑中是否已经安装下列应用程序：<br>.Node.js<br>.Git</p>
+<h3 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2.安装hexo"></a>2.安装hexo</h3><p>.windows<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1.npm install hexo-cli -g</div></pre></td></tr></table></figure></p>
+<p>.mac安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 sudo npm install hexo-cli -g</div></pre></td></tr></table></figure></p>
+<h3 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h3><p>.初始化博客文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 hexo init blog</div></pre></td></tr></table></figure></p>
+<p>.安装博客所需模块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 cd blog &amp;&amp;npm install</div></pre></td></tr></table></figure></p>
+<p>.启动服务查看基本结构<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 hexo server</div></pre></td></tr></table></figure></p>
+<h3 id="4-新建文章"><a href="#4-新建文章" class="headerlink" title="4.新建文章"></a>4.新建文章</h3><p>.添加文章为md格式来进行编写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 hexo new &apos;文章名&apos;</div></pre></td></tr></table></figure></p>
+<h3 id="5-发布到Git上"><a href="#5-发布到Git上" class="headerlink" title="5.发布到Git上"></a>5.发布到Git上</h3><p>.下载hexo-deployer-git插件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>.修改_config.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1 deploy:</div><div class="line">2   type:git</div><div class="line">3   repo:&lt;repository url&gt;</div><div class="line">4   branch:master</div><div class="line">5   message:push</div></pre></td></tr></table></figure></p>
+<p>.部署<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 hexo deploy</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">如果需要再次发布文章，需要执行hexo g</div></pre></td></tr></table></figure>
+<p>发布的时候，不需要git init 因为会自动发送<br> .取消<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 rm -rf  .git</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/08/21/hexo如何搭建静态博客/" data-id="cis5q3skc0003xo0vgfml9tzd" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/21/hello-world/" class="article-date">
+  <time datetime="2016-08-21T01:45:36.351Z" itemprop="datePublished">2016-08-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/21/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/08/21/hello-world/" data-id="cis5q3sk30001xo0v3x5my3no" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archieven</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recente berichten</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/08/21/git常用命令/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/21/Buffer/">node.js</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/21/hexo如何搭建静态博客/">node.js</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/21/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
