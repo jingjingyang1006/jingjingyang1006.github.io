@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="BufferJS语言自身只有字符串数据类型，没有二进制数据类型，因此Node.JS提供了一个与String对等的全局构造函数Buffer来提供对二进制数据的操作
 1.什么是Buffer .缓冲区Buffer是暂时存放输入输出数据的一段内存。 .JS语言没有二进制数据类型，而在处理TCP和文件流的时候，必须要处理二进制数据。 .NodeJS提供了一个BUffer对象来提供对二进制数据的操作 .是一个">
-<meta property="og:updated_time" content="2016-08-22T07:12:54.092Z">
+<meta property="og:updated_time" content="2016-08-27T02:30:58.612Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="node.js">
 <meta name="twitter:description" content="BufferJS语言自身只有字符串数据类型，没有二进制数据类型，因此Node.JS提供了一个与String对等的全局构造函数Buffer来提供对二进制数据的操作
@@ -55,9 +55,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -104,11 +104,13 @@
 <p>4.7 isBuffer<br>.判断是否是buffer<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Buffer.isBuffer</div></pre></td></tr></table></figure></p>
 <p>4.8 length<br> .获取字节长度(显示是字符串所代表buffer的长度)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1 Buffer.byteLength(&quot;珠峰&quot;)；</div><div class="line">2 buffer.length;</div></pre></td></tr></table></figure></p>
 <p>5.进制转换<br>.parseInt()</p>
-
+<p>异步：不占用主线程；<br>NOde中驻现场是单线程的<br>——dirname __firname的全局对象的参数；</p>
+<h2 id="cmd-amd-commitJS"><a href="#cmd-amd-commitJS" class="headerlink" title="cmd amd commitJS"></a>cmd amd commitJS</h2><p>npm install 可以安装所有依赖<br>main属性表示入口文件；</p>
+<h2 id="readfile是讲内容读到内存中，如果文件过大是无法读取的；"><a href="#readfile是讲内容读到内存中，如果文件过大是无法读取的；" class="headerlink" title="readfile是讲内容读到内存中，如果文件过大是无法读取的；"></a>readfile是讲内容读到内存中，如果文件过大是无法读取的；</h2>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/21/Buffer/" data-id="cisci4ylm0000ko0vddmxgjof" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/08/21/Buffer/" data-id="ciscias9s0000wo0vx50rugg8" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -118,7 +120,7 @@
 <nav id="article-nav">
   
     <a href="/2016/08/21/git常用命令/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
           (no title)
@@ -128,7 +130,7 @@
   
   
     <a href="/2016/08/21/hexo如何搭建静态博客/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title">node.js</div>
     </a>
   
@@ -161,9 +163,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/08/27/异步创建文件/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2016/08/21/git常用命令/">(no title)</a>
@@ -194,7 +200,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

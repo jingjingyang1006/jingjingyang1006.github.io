@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,75 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-异步创建文件" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/27/异步创建文件/" class="article-date">
+  <time datetime="2016-08-27T02:46:45.440Z" itemprop="datePublished">2016-08-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        /**
+ * Created by Administrator on 2016/8/27.
+ */
+//递归
+var fs=require('fs');
+
+function mkdirp(p){
+    //拆成一个数组
+  var ary= p.split('/');
+    //我们乣先拿出来一个先创建
+    var index=0;
+    make(ary[index]);
+    function make(p){
+        if(index>=ary.length+1){
+            return;
+        }
+        fs.mkdir(p,function(err){
+            make(ary.slice(0,++index+1).join('/'))
+        })
+    }
+
+}
+mkdirp('a/b/c/d')
+
+
+//异步创建文件  反式递归；重重
+
+function mkdirs(p,fn) {
+    //先判断a/b/c/d是否存在
+    fs.exists(p,function (exist) { //判断当前目录是否存在
+        if(exist){
+            fn();
+        }else{
+            //看当前目录的上一级是否存在
+            mkdirs(path.dirname(p),function () {
+                fs.mkdir(p,fn)
+            });
+        }
+    });
+}
+/*创建可读流，当我们创建了一个可读流，不糊读取数据，返回的是当前的可读流  读的流要把水管开开？  trunk清空 create 创建 writeOnly仅仅写 defaultEncoding:默认编码：utf8*/
+/*
+ExcL  排他 */
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/08/27/异步创建文件/" data-id="citpc3lai00001g0vxljtgifq" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-git常用命令" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -119,7 +188,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/21/git常用命令/" data-id="cisci4ylz0003ko0va0q473gt" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/08/21/git常用命令/" data-id="cisciasa70002wo0vj13i8c37" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -167,11 +236,13 @@
 <p>4.7 isBuffer<br>.判断是否是buffer<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Buffer.isBuffer</div></pre></td></tr></table></figure></p>
 <p>4.8 length<br> .获取字节长度(显示是字符串所代表buffer的长度)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1 Buffer.byteLength(&quot;珠峰&quot;)；</div><div class="line">2 buffer.length;</div></pre></td></tr></table></figure></p>
 <p>5.进制转换<br>.parseInt()</p>
-
+<p>异步：不占用主线程；<br>NOde中驻现场是单线程的<br>——dirname __firname的全局对象的参数；</p>
+<h2 id="cmd-amd-commitJS"><a href="#cmd-amd-commitJS" class="headerlink" title="cmd amd commitJS"></a>cmd amd commitJS</h2><p>npm install 可以安装所有依赖<br>main属性表示入口文件；</p>
+<h2 id="readfile是讲内容读到内存中，如果文件过大是无法读取的；"><a href="#readfile是讲内容读到内存中，如果文件过大是无法读取的；" class="headerlink" title="readfile是讲内容读到内存中，如果文件过大是无法读取的；"></a>readfile是讲内容读到内存中，如果文件过大是无法读取的；</h2>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/21/Buffer/" data-id="cisci4ylm0000ko0vddmxgjof" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/08/21/Buffer/" data-id="ciscias9s0000wo0vx50rugg8" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -221,7 +292,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/21/hexo如何搭建静态博客/" data-id="cisci4ylr0001ko0vfstggt5x" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/08/21/hexo如何搭建静态博客/" data-id="cisciasab0003wo0vxfxaykmh" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -266,7 +337,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/21/hello-world/" data-id="cisci4ylw0002ko0vhy54ntfw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/08/21/hello-world/" data-id="cisciasa10001wo0v39zrh0ld" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -301,9 +372,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/08/27/异步创建文件/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2016/08/21/git常用命令/">(no title)</a>
@@ -334,7 +409,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
