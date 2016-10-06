@@ -5,52 +5,13 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="/**
- * Created by Administrator on 2016/8/27.
- */
-//递归
-var fs=require(&apos;fs&apos;);
-
-function mkdirp(p){
-    //拆成一个数组
-  var ary= p.split(&apos;/&apos;);
-    //我们乣先拿出来一个先创建
-    var index=0;
-    make(ary[index]);
-    fu">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/2016/08/27/异步创建文件/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/10/01/2.this关键字总结/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="/**
- * Created by Administrator on 2016/8/27.
- */
-//递归
-var fs=require(&apos;fs&apos;);
-
-function mkdirp(p){
-    //拆成一个数组
-  var ary= p.split(&apos;/&apos;);
-    //我们乣先拿出来一个先创建
-    var index=0;
-    make(ary[index]);
-    fu">
-<meta property="og:updated_time" content="2016-09-30T06:28:01.328Z">
+<meta property="og:updated_time" content="2016-10-01T03:50:31.062Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="/**
- * Created by Administrator on 2016/8/27.
- */
-//递归
-var fs=require(&apos;fs&apos;);
-
-function mkdirp(p){
-    //拆成一个数组
-  var ary= p.split(&apos;/&apos;);
-    //我们乣先拿出来一个先创建
-    var index=0;
-    make(ary[index]);
-    fu">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -99,10 +60,10 @@ function mkdirp(p){
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-异步创建文件" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-2.this关键字总结" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/08/27/异步创建文件/" class="article-date">
-  <time datetime="2016-08-27T02:46:45.440Z" itemprop="datePublished">2016-08-27</time>
+    <a href="/2016/10/01/2.this关键字总结/" class="article-date">
+  <time datetime="2016-10-01T03:50:31.062Z" itemprop="datePublished">2016-10-01</time>
 </a>
     
   </div>
@@ -111,54 +72,11 @@ function mkdirp(p){
     
     <div class="article-entry" itemprop="articleBody">
       
-        /**
- * Created by Administrator on 2016/8/27.
- */
-//递归
-var fs=require('fs');
-
-function mkdirp(p){
-    //拆成一个数组
-  var ary= p.split('/');
-    //我们乣先拿出来一个先创建
-    var index=0;
-    make(ary[index]);
-    function make(p){
-        if(index>=ary.length+1){
-            return;
-        }
-        fs.mkdir(p,function(err){
-            make(ary.slice(0,++index+1).join('/'))
-        })
-    }
-
-}
-mkdirp('a/b/c/d');
-
-
-//异步创建文件  反式递归；重重
-
-function mkdirs(p,fn) {
-    //先判断a/b/c/d是否存在
-    fs.exists(p,function (exist) { //判断当前目录是否存在
-        if(exist){
-            fn();
-        }else{
-            //看当前目录的上一级是否存在
-            mkdirs(path.dirname(p),function () {
-                fs.mkdir(p,fn)
-            });
-        }
-    });
-}
-/*创建可读流，当我们创建了一个可读流，不糊读取数据，返回的是当前的可读流  读的流要把水管开开？  trunk清空 create 创建 writeOnly仅仅写 defaultEncoding:默认编码：utf8*/
-/*
-ExcL  排他 */
-
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/27/异步创建文件/" data-id="citpc4pwb0004rg0v0hp54q0k" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/10/01/2.this关键字总结/" data-id="citxou67t00006c0vjujhn5h1" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -167,7 +85,7 @@ ExcL  排他 */
     
 <nav id="article-nav">
   
-    <a href="/2016/10/01/1.基础部分/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/10/01/Hybrid App开发模式/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
@@ -177,7 +95,7 @@ ExcL  排他 */
     </a>
   
   
-    <a href="/2016/08/21/git常用命令/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/10/01/1.基础部分/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title"></div>
     </a>
